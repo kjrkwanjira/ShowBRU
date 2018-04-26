@@ -69,11 +69,11 @@ public class MainFragment extends Fragment{
 
                         JSONArray jsonArray = new JSONArray(jsonString);
                         
-                        for (int i=0; i<jsonArray.length(); i++) {
+                        for (int i=0; i<jsonArray.length(); i +=1) {
 
                             JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-                            if (userString.equals(jsonObject.get("User"))) {
+                            if (userString.equals(jsonObject.getString("User"))) {
 
                                 b = false;
                                 truePass = jsonObject.getString("Password");
